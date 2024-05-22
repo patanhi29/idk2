@@ -1,4 +1,6 @@
 //merge sort
+tc : o(nlogn)
+sc : o(n)
 #include <stdio.h>
 #include <stdlib.h>
 void Merge(int arr[], int left, int mid, int right) {
