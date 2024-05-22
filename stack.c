@@ -1,3 +1,12 @@
+// Time Complexity:
+
+// initStack: O(1)
+// push: O(1)
+// pop: O(1)
+// display: O(n)
+// Space Complexity:
+// Overall: O(MAX)
+
 #include <stdio.h>
 #include <stdlib.h>
 
