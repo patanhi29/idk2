@@ -1,12 +1,11 @@
 // Time Complexity:
-
 // initStack: O(1)
 // push: O(1)
 // pop: O(1)
+// peek: O(1)
 // display: O(n)
 // Space Complexity:
 // Overall: O(MAX)
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -64,13 +63,22 @@ void display(struct Stack* stack) {
     }
 }
 
+// Function to peek the topmost element of the stack
+void peek(struct Stack* stack) {
+    if (isEmpty(stack)) {
+        printf("Stack is empty\n");
+        return;
+    }
+    printf("Topmost element is: %d\n", stack->items[stack->top]);
+}
+
 int main() {
     struct Stack stack;
     initStack(&stack);
 
     int choice, item;
 
-    printf("\nMenu:\n1. Push\n2. Pop\n3. Display\n4. Exit\n");
+    printf("\nMenu:\n1. Push\n2. Pop\n3. Display\n4. Peek\n5. Exit\n");
 
     while (1) {
         printf("Enter your choice: ");
@@ -92,6 +100,9 @@ int main() {
                 display(&stack);
                 break;
             case 4:
+                peek(&stack);
+                break;
+            case 5:
                 printf("Exiting...\n");
                 exit(0);
             default:
